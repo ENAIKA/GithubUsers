@@ -1,1 +1,13 @@
-<p>user-component works!</p>
+<div class="container bg-primary">
+    <h3 class="text-center">Search Github User</h3>
+    <hr>
+    <form (ngSubmit)='submitUser()' #userForm='ngForm'>
+        <div class="form-group">
+
+            <label for="githubUserName">User Name<span class="danger">*</span></label>
+            <input type="search" class="form-control" id="githubUserName" [(ngModel)]="user.githubUserName"
+                name="githubUserName" #githubUserName="ngModel" required>
+        </div>
+        <button type="submit" [disabled]="!userForm.valid" class="btn btn-success">Search</button>
+    </form>
+</div>
