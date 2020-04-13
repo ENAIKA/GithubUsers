@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import{UserRequestService} from '../../services/user-request.service';
 import{User} from '../../classes/user';
+import {FormGroup} from '@angular/forms';
+
+
 @Component({
   selector: 'app-user-component',
   templateUrl: './user-component.component.html',
@@ -8,10 +11,22 @@ import{User} from '../../classes/user';
 })
 export class UserComponentComponent implements OnInit {
 user:User;
-  constructor(private userrequest:UserRequestService) { }
 
+userForm:FormGroup;
+
+submitUser(){
+
+  console.log(this.user.githubUserName);
+  this.user= new User("","","","","");//empty the field after submit
+  }
+
+  constructor(private userrequest:UserRequestService) { }
+  
   ngOnInit(){
-   console.log( this.userrequest.userRequest())
+    this.userrequest.userRequest()
+    this.user=this.userrequest.user
+    console.log(this.user)
+    
    
   }
 
