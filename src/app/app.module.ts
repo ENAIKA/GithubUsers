@@ -7,7 +7,7 @@ import { UserComponentComponent } from './Components/user-component/user-compone
 import { RepoComponentComponent } from './Components/repo-component/repo-component.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
