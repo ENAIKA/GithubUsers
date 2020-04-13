@@ -1,27 +1,62 @@
-# GithubUsers
+# GitHuby Website
+#### created, 13/04/2020
+#### By [E Naika](https://github.com/ENAIKA)
+## Description
+* This is a website for searching GitHub users and repos built with Angular 9 Framework.
+ 
+## Setup/Installation Requirements
+* To run the website need a browser (for IE browsers version 9 and above is recommended.)
+#### To Contribute
+* Before starting the steps below: make sure Angular9 CLI is installed have compartible version, set the angular environment.
+Follow this steps:
+* Fork the repo
+* Create your branch 
+* Make the appropriate changes in the files
+* Add changes to reflect the changes made 
+* Commit your changes 
+* Push to the branch 
+* Create a Pull Request.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+# Behaviour Driven Design
+* The website should search repositories and GitHub users from user inputs.
 
-## Development server
+### Specifications
+| Behaviour                | Input example           | Output Example                   |
+| ---------------------------|:-----------------------:| --------------------------------:|
+| An empty form              | No input | false/search button should not show|
+|  fields filled      |  Input fields filled | True/display search button  |
+|  click Search button      |  click event | True/display search results  |
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* create user interface.
 
-## Code scaffolding
+## Technologies Used
+* Angular Framework.
+* HTML for page layout.
+* Bootstrap and Custom-made CSS for styling.
+* VS Code-IDE
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# URL
+* https://enaika.github.io/GithubUsers/
 
-## Build
+### License
+* MIT License
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Copyright © [E NAIKA](https://github.com/ENAIKA)[2020]
 
-## Running unit tests
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
