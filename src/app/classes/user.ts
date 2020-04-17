@@ -1,3 +1,3 @@
 export class User {
-    constructor(public githubUserName:string, public userEmail:string, public userRepos:string, public userCompany:string, public userLocation:string){}
+    constructor(public githubUserName:string, public userPicture:string, public userRepos:number, public userFollowing:number, public userFollowers:number, public githubUrl:string, public date:Date){}
 }
