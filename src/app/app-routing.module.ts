@@ -5,9 +5,9 @@ import {RepoComponentComponent} from '../app/Components/repo-component/repo-comp
 import {UserComponentComponent} from '../app/Components/user-component/user-component.component';
 const routes: Routes = [
   
-  { path:'github_users', component:UserComponentComponent},
+  { path:'github_user', component:UserComponentComponent},
   { path:'user_repos', component:RepoComponentComponent},
-  { path: '', redirectTo:'/github_users', pathMatch:'full'},
+  { path: '', redirectTo:'/github_user', pathMatch:'full'},
   { path:'**', component:NotFoundComponent}
 ];
 
