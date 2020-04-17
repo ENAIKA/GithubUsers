@@ -14,7 +14,7 @@
         </form>
     </div>
     <div>
-        <div class="=row bg-white">
+        <div class="=row bg-transparent">
             <div class="d-flex flex-row flex-wrap justify-content-center ">
                 <div class="col-md-5" style="padding-top: 20px;">
                     <div class="card">
@@ -42,11 +42,11 @@
                         <div class="card-header">
                             <p>Repos.</p>
                         </div>
-                        <div class="card-body justify-content-center"*ngFor="let repo of this.userrequest.repo" >
+                        <div appBgHighlight class="card-body justify-content-center"*ngFor="let repo of this.userrequest.repo" >
                             <ul >
-                                <li>Repo Name: {{repo.name}} <br>
+                                <li >Repo Name: {{repo.name}} <br>
                                     Description: {{repo.description}}<br>
-                                    <a href="{{repo.url}}" target="_blank">view repo in Github</a></li><hr>
+                                    <a href="{{repo.html_url}}" target="_blank">view repo in Github</a></li><hr>
                             </ul>
                         </div>
                     </div>
