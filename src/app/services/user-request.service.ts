@@ -13,18 +13,15 @@ import { Repos } from '../classes/repos';
 export class UserRequestService {
   user: User;
   repo: Repos;
-  repos:Repos[];
   key = environment.key
   gitName: string;
-  reponame: string;
-  githubRepoSearchUrl = "https://api.github.com/search/repositories?access_token=" + this.key + "&q="
+ 
+  
 
 
   constructor(private http: HttpClient) {
     this.gitName = "enaika"
     this.user = new User("", "", 0, 0, 0, "", new Date());
-  
-    this.repos=[]
   }
 
   userRequest() {
@@ -78,13 +75,10 @@ export class UserRequestService {
     return promise
 
   }
+
   getUrl(gitName: string) {
     this.gitName = gitName
   }
 
-  getRepoName(reponame: string) {
-    this.reponame = reponame
-
-  }
 
 }
