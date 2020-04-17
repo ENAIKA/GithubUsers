@@ -1,13 +1,57 @@
 <div class="container bg-primary">
     <h3 class="text-center">Search Github User</h3>
     <hr>
-    <form (ngSubmit)='submitUser()' #userForm='ngForm'>
-        <div class="form-group">
+    <div class="d-flex flex-row flex-wrap justify-content-center ">
+        <form #userForm='ngForm'>
+            <div class="form-group">
 
-            <label for="githubUserName">User Name<span class="danger">*</span></label>
-            <input type="search" class="form-control" id="githubUserName" [(ngModel)]="user.githubUserName"
-                name="githubUserName" #githubUserName="ngModel" required>
-        </div>
-        <button type="submit" [disabled]="!userForm.valid" class="btn btn-success">Search</button>
-    </form>
+                <label for="gitName">User Name<span class="alert-danger">*</span></label>
+                <input type="search" class="form-control" id="gitName" [(ngModel)]="gitName" name="gitName" required>
+            </div>
+            <div>
+                <button type="button" (click)="submitUser()" [disabled]="!userForm.valid" class="btn btn-success">Search</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <div class="=row bg-white">
+            <div class="d-flex flex-row flex-wrap justify-content-center ">
+                <div class="col-md-5" style="padding-top: 20px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <p>Name: {{user.githubUserName}}</p>
+                        </div>
+                        <div class="card-body">
+                            <p> <img src="{{user.userPicture}}" alt="profile Picture image"></p>
+                             Joined {{user.date|dateCount}}
+                        </div>
+                        <div class="card-footer">
+                            <p>
+                                <span class="text-success">Followers: {{user.userFollowers}}</span> <span
+                                    class="text-primary"> Following: {{user.userFollowing}}</span> <span
+                                    class="text-warning"> Public Repos: {{user.userRepos}}</span></p>
+                            <a href="{{user.githubUrl}}" target="_blank" class="text-center text-info">View profile in
+                                Github
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7" style="padding-top: 20px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <p>Repos.</p>
+                        </div>
+                        <div class="card-body justify-content-center"*ngFor="let repo of this.userrequest.repo" >
+                            <ul >
+                                <li>Repo Name: {{repo.name}} <br>
+                                    Description: {{repo.description}}<br>
+                                    <a href="{{repo.url}}" target="_blank">view repo in Github</a></li><hr>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>              
+    </div>
 </div>
