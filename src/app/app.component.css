@@ -1,0 +1,7 @@
+.container-fluid{
+    background-image: url('../assets/personFind.jpg');
+    height:auto;
+    background-repeat:repeat;
+    width: 100%;
+    opacity:0.8;
+}
