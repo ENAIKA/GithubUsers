@@ -8,13 +8,19 @@ import { RepoComponentComponent } from './Components/repo-component/repo-compone
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
+import { UserFormComponent } from './Components/user-form/user-form.component';
+import { DateCountPipe } from './date-count.pipe';
+import { BgHighlightDirective } from './bg-highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponentComponent,
     RepoComponentComponent,
     NotFoundComponent,
-    NavBarComponent
+    NavBarComponent,
+    UserFormComponent,
+    DateCountPipe,
+    BgHighlightDirective
   ],
   imports: [
     BrowserModule,
