@@ -1,0 +1,29 @@
+<div class="container bg-primary">
+    <h3 class="text-center">Search Github Repos</h3>
+    <hr>
+    <form  #repoForm='ngForm'>
+        <div class="form-group">
+
+            <label for="reponame">Repo Name<span class="alert-danger">*</span></label>
+            <input type="search" class="form-control" id="reponame" [(ngModel)]="reponame" name="reponame" required>
+        </div>
+        <button type="button" [disabled]="!repoForm.valid" class="btn btn-success" (click)="submitRepo()">Search</button>
+    </form>
+</div>
+
+    <div class="=row bg-transparent">
+        <div class="d-flex flex-row flex-wrap justify-content-center ">
+            <div style="padding-top: 20px;margin-left:20px"*ngFor="let repo of this.userRequestRepo.repos" >
+                <div class="card">
+                    <div class="card-header">
+                        <p>Repo Name: {{repo.name}}</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Description: {{repo.description}}</p>
+                    
+                        <a href="{{repo.html_url}}" target="_blank"><button class="btn-success text-white">View Repo</button> </a>
+                    </div>
+                </div><hr>
+            </div>
+        </div>
+    </div>
